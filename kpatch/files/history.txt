@@ -1,0 +1,72 @@
+    1  ip a
+    2  uname -r
+    3  yum list --showduplicates kernel
+    4  yum install 4.18.0-147.el8
+    5  reboot
+    6  uname -r
+    7  rpm -qa |grep kernel
+    8  yum remove kernel-4.18.0-147.8.1.el8_1.x86_64
+    9  rpm -qa |grep 4.18.0-147.8.1.el8_1.x86_64
+   10  yum update
+   11  reboot
+   12  rpm -qa |grep 4.18.0-147.8.1.el8_1.x86_64
+   13  rpm -qa |grep 4.18.0-147
+   14  rpm -qa |grep 4.18.0-147.8.1.el8_1.x86_64
+   15  yum remove kernel-modules-4.18.0-147.8.1.el8_1.x86_64
+   16  rpm -qa |grep 4.18.0-147.8.1.el8_1.x86_64
+   17  yum remove kernel-core-4.18.0-147.8.1.el8_1.x86_64
+   18  rpm -qa |grep 4.18.0-147.8.1.el8_1.x86_64
+   19  yum remove kernel-tools-4.18.0-147.8.1.el8_1.x86_64
+   20  rpm -qa |grep 4.18.0-147.8.1.el8_1.x86_64
+   21  reboot
+   22  shutdown -h now
+   23  ll
+   24  ./cve-2019-11135--2019-11-12-1735.sh 
+   25  shutdown -h now
+   26  ./cve-2019-11135--2019-11-12-1735.sh 
+   27  clear
+   28  exit
+   29  uname -e
+   30  uname -r
+   31  exit
+   32  git
+   33  yum install git
+   34  clear
+   35  ssh root@leapp
+   36  exit
+   37  clear
+   38  ll
+   39  ./cve-2019-11135--2019-11-12-1735.sh 
+   40  yum update
+   41  uname -r
+   42  clear
+   43  exit
+   44  uname -r
+   45  yum update
+   46  uptime
+   47  ll
+   48  ./cve-2019-11135--2019-11-12-1735.sh 
+   49  una,e -rclear
+   50  clear
+   51  ./cve-2019-11135--2019-11-12-1735.sh 
+   52  uname r
+   53  uname -r
+   54  yum search 4.18.0-147.el8.x86_64
+   55  yum search 4.18.0-147.el8
+   56  yum install -y kpatch-patch-4_18_0-147.x86_64
+   57  kpatch list
+   58  uptime
+   59  ./cve-2019-11135--2019-11-12-1735.sh 
+   60  yum update
+   61  ./cve-2019-11135--2019-11-12-1735.sh 
+   62  uname -r
+   63  kapatch list
+   64  kpatch list
+   65  exit
+   66  yum remove 'katello-ca-consumer*' && yum clean all && wget http://sat6.shadowman.dev/pub/katello-ca-consumer-latest.noarch.rpm && rpm -ivh katello-ca-consumer-latest.noarch.rpm
+   67  exit
+   68  yum update
+   69  ll
+   70  ./cve-2019-11135--2019-11-12-1735.sh 
+   71  history
+   72  history > history.txt

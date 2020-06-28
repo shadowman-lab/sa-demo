@@ -20,3 +20,19 @@
       group: root
       mode: '0755'
 
+  - name: Set Hostname on "{{ vm_name }}"
+    hostname:
+      name: "{{ vm_name }}"
+
+  - name: Set grub to default to the old kernel on boot so we are vulnerable for the exploit
+    shell: /usr/sbin/grubby --set-default-index=1
+
+  - name: Subscribe to our Satellite using our activation key
+    redhat_subscription:
+      state: present
+      activationkey: RHEL_81
+      org_id: Shadow_Man
+    ignore_errors: true
+
+  - name: Reboot the machine
+    reboot:

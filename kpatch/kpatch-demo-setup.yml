@@ -1,0 +1,22 @@
+---
+- name: Deploy a kpatch demo environment
+  hosts: "{{ vm_name }}"
+  serial: 1
+
+  tasks:
+  - name: Create our SA Labs / Demos directories for our tools and scripts
+    file:
+      path: "{{ item }}"
+      state: directory
+      mode: "u=rwx,g=wx,o=rwx"
+    with_items:
+      - /root/tools
+
+  - name: Copy the files needed for this Lab / Demo
+    copy:
+      src: ./files/
+      dest: /root/tools/
+      owner: root
+      group: root
+      mode: '0755'
+

@@ -4,5 +4,5 @@
   gather_facts: true
 
   tasks:
-  - name: Reboot Windows
-    reboot:
+  - name: Reboot Windows via Ansible Windows Module
+    ansible.windows.win_reboot:

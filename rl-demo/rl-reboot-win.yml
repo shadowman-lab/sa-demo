@@ -1,7 +1,6 @@
 ---
 - name: Reboot Windows Servers
-  hosts: "{{ win_vm_name }}"
-  gather_facts: true
+  gather_facts: false
 
   tasks:
   - name: Reboot Windows via Ansible Windows Module

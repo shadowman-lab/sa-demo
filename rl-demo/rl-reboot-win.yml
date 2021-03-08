@@ -1,5 +1,9 @@
 ---
+- name: Reboot Windows Servers
 
-- name: Reboot server if needed
-  ansible.windows.win_reboot:
-  when: domain_state.reboot_required
+  collections:
+    - ansible.windows
+
+  tasks:
+  - name: Reboot server if needed
+    ansible.windows.win_reboot:

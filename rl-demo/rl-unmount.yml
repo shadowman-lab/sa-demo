@@ -1,8 +1,5 @@
 ---
 - name: Unmount SMB / CIFS shares
-  hosts: "{{ vm_name }}"
-  serial: 1
-
   tasks:
   - name: Create directories for our tools and scripts
     file:

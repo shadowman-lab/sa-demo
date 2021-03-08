@@ -1,0 +1,22 @@
+---
+- name: Unmount SMB / CIFS shares
+  tasks:
+  - name: Create directories for our tools and scripts
+    file:
+      path: "{{ item }}"
+      state: directory
+      mode: "u=rwx,g=wx,o=rwx"
+    with_items:
+      - /root/tools
+
+  - name: Copy the files needed for this Lab / Demo
+    copy:
+      src: ./files/
+      dest: /root/tools/
+      owner: root
+      group: root
+      mode: '0755'
+
+  - name: Set grub to default to the old kernel on boot so we are vulnerable for the exploit
+    shell: /root/tools/unmount.sh
+

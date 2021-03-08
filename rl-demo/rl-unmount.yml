@@ -1,6 +1,6 @@
 ---
 - name: Unmount SMB / CIFS shares
-  hosts: all
+  hosts: "{{ rhel_vm_name }}"
 
   tasks:
   - name: Create directories for our tools and scripts

@@ -1,6 +1,6 @@
 ---
 - name: Reboot Windows Machines
-  hosts: all
+  hosts: "{{ win_vm_name }}"
 
   tasks:
   - name: Reboot Windows Machines

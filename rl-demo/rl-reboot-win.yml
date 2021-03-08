@@ -1,5 +1,6 @@
 ---
 - name: Reboot Windows Servers
+  hosts: all
 
   collections:
     - ansible.windows

@@ -7,4 +7,4 @@
 
   tasks:
   - name: Reboot server if needed
-    ansible.windows.win_reboot:
+    win_reboot:

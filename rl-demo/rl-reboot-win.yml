@@ -1,8 +1,4 @@
 ---
-- name: Reboot Windows Machines
-  hosts: "{{ win_vm_name }}"
-  gather_facts: false
-
-  tasks:
-  - name: Reboot Windows Machines
-    ansible.windows.win_reboot:
+- name: Reboot server
+  ansible.windows.win_reboot:
+  when: domain_state.reboot_required

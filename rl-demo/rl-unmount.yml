@@ -1,5 +1,7 @@
 ---
 - name: Unmount SMB / CIFS shares
+  hosts: all
+
   tasks:
   - name: Create directories for our tools and scripts
     file:

@@ -1,5 +1,6 @@
 ---
 - name: Reboot Windows Machines
+  hosts: all
 
   tasks:
   - name: Reboot Windows Machines
